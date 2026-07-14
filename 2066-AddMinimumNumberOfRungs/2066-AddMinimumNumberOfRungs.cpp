@@ -1,0 +1,17 @@
+// Last updated: 7/14/2026, 3:23:44 PM
+class Solution {
+public:
+    int addRungs(vector<int>& rungs, int dist){
+        int cnt=0;
+        for(int i=rungs.size()-1;i>=0;i--){
+           int j=(i!=0)?(rungs[i]-rungs[i-1]):rungs[i];
+           if(j>dist){
+               cnt+=((j-1)/dist);
+			   //or
+			   //cnt+=(j/dist)-1;
+               //if(j%dist > 0) cnt++;
+           }
+        }
+        return cnt;
+    }
+};
