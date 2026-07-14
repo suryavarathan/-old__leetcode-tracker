@@ -1,0 +1,3 @@
+// Last updated: 7/14/2026, 3:29:01 PM
+/**************************😎**************************/
+const distanceLimitedPathsExist=(i,t,s)=>{s=s.map(((i,t)=>[...i,t])).sort(((i,t)=>i[2]-t[2])),t.sort(((i,t)=>i[2]-t[2]));const n=Array(s.length),r=new DS(i);let h=0;for(let[i,d,o,e]of s){for(;h<t.length&&t[h][2]<o;){const[i,s,n]=t[h];r.union(i,s),h++}n[e]=r.find(i)===r.find(d)}return n};class DS{constructor(i){this.id=[...Array(i).keys()],this.rank=Array(i).fill(0)}find(i){return i!==this.id[i]&&(this.id[i]=this.find(this.id[i])),this.id[i]}union(i,t){const[s,n]=[this.find(i),this.find(t)];if(s===n)return!1;const[r,h]=[this.rank[s],this.rank[n]];return r<h?this.id[s]=n:r>h?this.id[n]=s:(this.id[s]=n,this.rank[n]++),!0}}
