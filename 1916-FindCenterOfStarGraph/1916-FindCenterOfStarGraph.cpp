@@ -1,0 +1,12 @@
+// Last updated: 7/14/2026, 3:26:57 PM
+class Solution {
+public:
+    int findCenter(vector<vector<int>>& edges) {
+        int a = edges[0][0];
+        int b = edges[0][1];
+        int c = edges[1][0];
+        int d = edges[1][1];
+
+        return (a==c || c==b) ? c:d;
+    }
+};
