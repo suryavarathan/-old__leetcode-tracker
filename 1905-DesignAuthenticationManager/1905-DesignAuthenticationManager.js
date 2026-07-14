@@ -1,0 +1,2 @@
+// Last updated: 7/14/2026, 3:27:10 PM
+class AuthenticationManager{constructor(t){this.timeToLive=t,this.tokens=new Map}generate(t,e){this.tokens.set(t,e+this.timeToLive)}renew(t,e){this.tokens.has(t)&&this.tokens.get(t)>e&&this.tokens.set(t,e+this.timeToLive)}countUnexpiredTokens(t){for(const[e,s]of this.tokens)s<=t&&this.tokens.delete(e);return this.tokens.size}}
