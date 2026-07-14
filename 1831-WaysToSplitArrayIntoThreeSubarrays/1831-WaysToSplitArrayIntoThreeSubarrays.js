@@ -1,0 +1,3 @@
+// Last updated: 7/14/2026, 3:28:41 PM
+/**************************😎**************************/
+const waysToSplit=t=>{let o,n,e=0,r=0;const l=[0],s=(t,o,n)=>{let r;const s=l[o+1];for(;t<o;)r=t+o>>>1,(n?s-l[r]>=l[r]:e<s-l[r])?t=r+1:o=r;return n?s-l[t]<l[t]&&t--:e<s-l[t]&&t++,t};for(const o of t)l.push(l[l.length-1]+o);for(let c=t.length-1;c>1;c--)e+=t[c],o=s(1,c-1,0),o===c||l[o]>l[c]-l[o]||(n=s(o,c-1,1),r=(r+n-o+1)%1000000007);return r};
