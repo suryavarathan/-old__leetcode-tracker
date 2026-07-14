@@ -1,0 +1,2 @@
+// Last updated: 7/14/2026, 3:26:50 PM
+const areSentencesSimilar=(t,e)=>{const[n,r]=[t,e].map((t=>t.split(" "))).sort(((t,e)=>t.length-e.length));for(let t=0,e=-1;t<n.length+e+1;)if(n[t]===r[t])t++;else{if(n.at(e)!==r.at(e))return!1;e--}return!0};
