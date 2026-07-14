@@ -1,0 +1,2 @@
+// Last updated: 7/14/2026, 3:28:42 PM
+const countPairs=t=>{const e=new Map;let o=0;for(let r of t){for(let t=21;t>=0;t--){let n=2**t;if(n-r<0)break;e.has(n-r)&&(o+=e.get(n-r))}e.set(r,e.get(r)+1||1)}return o%(10**9+7)};
