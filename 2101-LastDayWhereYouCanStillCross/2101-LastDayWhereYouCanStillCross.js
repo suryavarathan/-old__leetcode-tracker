@@ -1,0 +1,3 @@
+// Last updated: 7/14/2026, 3:23:00 PM
+/**************************😎**************************/
+let dx=[0,0,1,-1],dy=[1,-1,0,0];const canWalk=(l,t,r,e)=>{let o=Array(t).fill(0).map((()=>Array(r).fill(0)));for(let t=0;t<e;t++)o[l[t][0]-1][l[t][1]-1]=1;let a=[];for(let l=0;l<r;l++)0===o[0][l]&&(a.push([0,l]),o[0][l]=1);for(;a.length;){let[l,e]=a.pop();if(l===t-1)return!0;for(let f=0;f<4;f++){let n=l+dx[f],s=e+dy[f];n>=0&&n<t&&s>=0&&s<r&&0===o[n][s]&&(a.push([n,s]),o[n][s]=1)}}return!1};function latestDayToCross(l,t,r){let e=0,o=r.length,a=0;for(;e<=o;){let f=Math.floor((e+o)/2);canWalk(r,l,t,f)?(a=f,e=f+1):o=f-1}return a}
