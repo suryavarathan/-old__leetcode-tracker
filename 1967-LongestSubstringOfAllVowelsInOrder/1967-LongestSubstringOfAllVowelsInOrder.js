@@ -1,0 +1,2 @@
+// Last updated: 7/14/2026, 3:25:52 PM
+const longestBeautifulSubstring=t=>{let e=0,n=0,h=[];for(let l=0;l<t.length;l++){const g=t.charCodeAt(l),o=t.length===l+1?-1:t.charCodeAt(l+1);h[h.length-1]!==g&&h.push(g),g>o&&(5===h.length&&(e=Math.max(e,l-n+1)),n=l+1,h=[])}return e};
