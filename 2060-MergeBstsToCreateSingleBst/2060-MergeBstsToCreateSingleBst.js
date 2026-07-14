@@ -1,0 +1,3 @@
+// Last updated: 7/14/2026, 3:23:49 PM
+/**************************😎**************************/
+const canMerge=e=>{let l=new Map,t=new Set,a=0,o=e.length;for(let o of e)t.add(o.val),a++,o.left&&(l.set(o.left.val,o),a++),o.right&&(l.set(o.right.val,o),a++);a-=o-1;let n=null;for(let t of e)l.has(t.val)||(n=t);for(let a of e)if(a!==n&&l.has(a.val)){let e=l.get(a.val);e.left&&e.left.val===a.val?e.left=a:e.right=a,t.delete(a.val)}return 1===t.size&&countNodes(n)===a?n:null};function countNodes(e,l=-1/0,t=1/0){return e?e.val<=l||e.val>=t?0:1+countNodes(e.left,l,e.val)+countNodes(e.right,e.val,t):0}
