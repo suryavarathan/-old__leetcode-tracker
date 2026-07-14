@@ -1,0 +1,2 @@
+// Last updated: 7/14/2026, 3:26:46 PM
+const countNicePairs=t=>{const e=new Map;let n=0;function o(t){let e=0,n=t;for(;n;)e*=10,e+=n%10,n=Math.floor(n/10);return t-e}for(let r=0;r<t.length;r++){const c=o(t[r]);n+=e.get(c)||0,e.set(c,(e.get(c)||0)+1)}return n%1000000007};
