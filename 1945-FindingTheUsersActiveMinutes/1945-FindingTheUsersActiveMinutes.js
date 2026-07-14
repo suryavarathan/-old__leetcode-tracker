@@ -1,0 +1,2 @@
+// Last updated: 7/14/2026, 3:26:24 PM
+const findingUsersActiveMinutes=(e,t)=>{let i={},r=Array(t).fill(0);for(let[t,s]of e)if(i.hasOwnProperty(t)){if(!i[t].has(s)){i[t].add(s);let e=i[t].size;r[e-1]++,r[e-2]--}}else i[t]=new Set([s]),r[0]++;return r};
