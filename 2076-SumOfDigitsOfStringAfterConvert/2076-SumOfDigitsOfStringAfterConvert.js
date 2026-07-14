@@ -1,0 +1,2 @@
+// Last updated: 7/14/2026, 3:23:40 PM
+const getLucky=(e,t)=>{let r=e.split("").reduce(((e,t)=>e+(t.charCodeAt(0)-96)),"");for(;t>0;)r=r.toString().split("").reduce(((e,t)=>e+Number(t)),0),t--;return r};
