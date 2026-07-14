@@ -1,0 +1,2 @@
+// Last updated: 7/14/2026, 3:28:52 PM
+const halvesAreAlike=e=>{let l=e.slice(0,e.length/2),t=e.slice(e.length/2,e.length);function n(e){let l=0,t=["a","e","i","o","u","A","E","I","O","U"];for(let n of e)t.includes(n)&&l++;return l}return n(l)==n(t)};
